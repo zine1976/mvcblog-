@@ -12,17 +12,20 @@ require_once __DIR__ . '/header.php';?>
 
     <dt>auteur</dt>
     <dd>
-        <a article="auteur:<?= $article->auteur ?>"><?= $article->auteur ?></a>
+        <p article="auteur:<?= $article->auteur ?>"><?= $article->auteur ?></p>
     </dd>
     
 
     <dt>titre</dt>
     <dd>
-        <a article="titre:<?= $article->titre ?>"><?= $article->titre ?></a>
+        <p article="titre:<?= $article->titre ?>"><?= $article->titre ?></p>
     </dd>
 
     <dt>image</dt>
-    <dd><a article="image:<?= $article->image ?>"><?= $article->image ?></dd>
+
+    <dd> <img src="<?= $a->image ?>" class="card-img-top" alt="...">
+
+</dd> 
 </dl>
 
 <?php 
