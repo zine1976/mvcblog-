@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 
 require_once __DIR__ . '/function.php';
 require_once __DIR__ . '/model/SimpleOrm.class.php';
@@ -13,7 +17,7 @@ if ($conn->connect_error)
 SimpleOrm::useConnection($conn, 'projet_php');
 
 if (!empty($_GET['route'])) $route = $_GET['route'];
-else $route = 'liste';
+else $route = 'accueil';
 
 
 
@@ -27,5 +31,8 @@ switch ($route) {
             require_once controller('liste-article-controller');
             break;
 
+            default:
+        erreur(404);
+        break;
 
     }
