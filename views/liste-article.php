@@ -18,12 +18,15 @@ require_once __DIR__ . '/header.php';?>
     <li class="list-group-item"><?= $a-> titre?>$</li>
     
   </ul>
-  
+  <div class="card-body">
+    <a href="<?= url('detail&id='.$a->id) ?>" class="card-link">detail</a>
+    <!-- <a href="<?= url('connexion') ?>" class="card-link">connexion</a> -->
+  </div>
 
    
 
 <?php } ?>
 
+<?php
 
-
-<?php require_once view('footer');
+require_once __DIR__ . '/footer.php';?>

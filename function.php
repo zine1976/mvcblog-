@@ -17,3 +17,7 @@ function controller(string $nom): string {
     function url(string $route = 'liste'): string {
         return 'index.php?route=' . $route;
     }
+    
+    function nom(object $article): string {
+        return ucfirst($article->titre) ;
+    }
