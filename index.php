@@ -22,4 +22,10 @@ switch ($route) {
     case 'accueil':
         require_once controller('accueil-controller');
         break;
+
+        case 'article':
+            require_once controller('liste-article-controller');
+            break;
+
+
     }
