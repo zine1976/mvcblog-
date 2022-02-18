@@ -12,13 +12,13 @@ require_once __DIR__ . '/header.php';?>
 
     <dt>auteur</dt>
     <dd>
-        <p article="auteur:<?= $article->auteur ?>"><?= $article->auteur ?></p>
+        <p><?= $article->auteur ?></p>
     </dd>
     
 
     <dt>titre</dt>
     <dd>
-        <p article="titre:<?= $article->titre ?>"><?= $article->titre ?></p>
+        <p><?= $article->titre ?></p>
     </dd>
 
     <dt>image</dt>
