@@ -1,8 +1,15 @@
 <?php
 
+function ajouter() {
+    // if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
 
-if (!empty($_POST)) {
-    
+    // On appelle la vue
+    include __DIR__ . '/../views/ajout-article.php';
+}
+
+function ajouter_handler() {
+    // if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
+
 
     if (
         !empty($_POST['titre'])
@@ -10,6 +17,7 @@ if (!empty($_POST)) {
         && !empty($_POST['contenu'])
         && !empty($_POST['image'])
 
+        && filter_var($_POST['image'], FILTER_VALIDATE_URL) !== false
         
     ) {
         
@@ -27,9 +35,10 @@ if (!empty($_POST)) {
 
         $article->save(); 
 
-        redirection('liste'); 
-    } else $error = true;
+        redirection('article'); 
+} 
+else redirection('ajout');
+
 }
 
-
-include __DIR__ . '/../views/ajout-article.php';
+// include __DIR__ . '/../views/ajout-article.php'

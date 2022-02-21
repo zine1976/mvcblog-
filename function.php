@@ -1,8 +1,8 @@
 <?php
 
 
-function redirection(string $route) {
-    header('Location: ' . url($route));
+function redirection($route) {
+    header('Location: index.php?route=' . $route);
     die;
 }
 
@@ -25,3 +25,6 @@ function controller(string $nom): string {
         echo 'Erreur ' . $code;
         die();
     }
+    
+
+   

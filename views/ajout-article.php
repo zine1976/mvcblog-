@@ -6,14 +6,14 @@ require_once __DIR__ . '/header.php';?>
 
 <h1>Ajouter un article</h1>
 
-<form method="post" >
+<form method="post" action="index.php?route=ajout-article-handler">
 
  
 
     <div class="form-group row">
         <label for="titre" class="col-12 col-form-label">titre</label>
         <div class="col-12">
-            <input type="text" class="form-control" name="nom" id="nom" placeholder="nom" required autofocus>
+            <input type="text" class="form-control" name="titre" id="titre" placeholder="titre" required autofocus>
         </div>
     </div>
 
@@ -31,7 +31,13 @@ require_once __DIR__ . '/header.php';?>
         </div>
     </div>
 
-    
+    <div class="form-group row">
+        <label for="contenu" class="col-12 col-form-label">image</label>
+        <div class="col-12">
+            <input type="url" class="form-control" name="image" id="image" placeholder="image" required>
+        </div>
+    </div>
+
     <div class="form-group row">
         <button href="<?= url('liste&id='.$a->id) ?>" type="submit" class="btn btn-primary">Envoyer</button>
       
