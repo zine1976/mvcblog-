@@ -2,7 +2,7 @@
 
 
 function supprimer() {
-    // if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
+    if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
 
 if (empty($_GET['id'])) erreur(404);
 

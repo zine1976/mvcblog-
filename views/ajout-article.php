@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-require_once __DIR__ . '/header.php';?>
+require_once __DIR__ . '/header.php'; ?>
 <?php require_once __DIR__ . '/nav.php';
 ?>
 
@@ -8,7 +8,7 @@ require_once __DIR__ . '/header.php';?>
 
 <form method="post" action="index.php?route=ajout-article-handler">
 
- 
+
 
     <div class="form-group row">
         <label for="titre" class="col-12 col-form-label">titre</label>
@@ -39,10 +39,10 @@ require_once __DIR__ . '/header.php';?>
     </div>
 
     <div class="form-group row">
-        <button href="<?= url('liste&id='.$a->id) ?>" type="submit" class="btn btn-primary">Envoyer</button>
-      
-    
+        <button href="<?= url('liste&id=' . $a->id) ?>" type="submit" class="btn btn-primary">Envoyer</button>
+
+
     </div>
 </form>
 <?php
-require_once __DIR__ . '/footer.php';?>
+require_once __DIR__ . '/footer.php'; ?>

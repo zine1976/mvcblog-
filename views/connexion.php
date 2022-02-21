@@ -1,12 +1,13 @@
-<?php 
+<?php
 
-require_once __DIR__ . '/header.php';?>
+require_once __DIR__ . '/header.php'; ?>
 <?php require_once __DIR__ . '/nav.php';
 ?>
 
 <h1>Connexion</h1>
 
-<form method="post" action="index.php?route=connexion-handler">
+<form method="post" action="index.php?route=connexion-handler&id=<?= $article->id ?>">
+    
     <div class="form-group row">
         <label for="login" class="col-sm-12 col-form-label">Identifiant</label>
         <div class="col-sm-12">
@@ -23,14 +24,14 @@ require_once __DIR__ . '/header.php';?>
 
     <div class="form-group row">
         <div class="col-sm-10">
-        <input type="checkbox" name="remember_me">
-    <label for="remember_me">cookie</label><br>
+            <input type="checkbox" name="remember_me">
+            <label for="remember_me">cookie</label><br>
             <button type="submit" class="btn btn-primary">Connexion</button>
         </div>
     </div>
 
-    
+
 </form>
 
-<?php 
-require_once __DIR__ . '/footer.php';?>
+<?php
+require_once __DIR__ . '/footer.php'; ?>

@@ -1,14 +1,16 @@
 <?php
 
-function ajouter() {
-    // if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
+function ajouter()
+{
+    if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
 
-    // On appelle la vue
+    
     include __DIR__ . '/../views/ajout-article.php';
 }
 
-function ajouter_handler() {
-    // if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
+function ajouter_handler()
+{
+    if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
 
 
     if (
@@ -18,10 +20,10 @@ function ajouter_handler() {
         && !empty($_POST['image'])
 
         && filter_var($_POST['image'], FILTER_VALIDATE_URL) !== false
-        
+
     ) {
-        
-        
+
+
         require_once model('article');
         $article = new article;
 
@@ -30,15 +32,11 @@ function ajouter_handler() {
         $article->auteur = $_POST['auteur'];
 
         $article->titre = $_POST['titre'];
-        
-        
 
-        $article->save(); 
 
-        redirection('article'); 
-} 
-else redirection('ajout');
 
+        $article->save();
+
+        redirection('article');
+    } else redirection('ajout');
 }
-
-// include __DIR__ . '/../views/ajout-article.php'
