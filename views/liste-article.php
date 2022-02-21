@@ -27,7 +27,7 @@ require_once __DIR__ . '/header.php'; ?>
         <a class="text-align-right" href="index.php?route=sup-article&id=<?= $a->id ?>">supprimer un article</a>
       </div>
 
-      <?php if (!empty($_SESSION['pseudo']) && $_SESSION['pseudo'] == 'admin') : ?>
+      <?php if (!empty($_SESSION['pseudo']) && $_SESSION['pseudo'] == 'Administrateur') : ?>
         <a class="text-align-right text-danger ml-2" href="index.php?route=sup-article&id=<?= $a->id ?>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
       <?php endif; ?>
 

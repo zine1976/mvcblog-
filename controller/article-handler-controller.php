@@ -10,8 +10,8 @@ function connexion_handler()
     if (!empty($_POST['password']) && !empty($_POST['login'])) {
 
 
-        include __DIR__ . '/../model/Utilisateur.php';
-        $utilisateur = Utilisateur::retrieveByField('pseudo', $_POST['login'], SimpleOrm::FETCH_ONE);
+        include __DIR__ . '/../model/utilisateur.php';
+        $utilisateur = utilisateur::retrieveByField('pseudo', $_POST['login'], SimpleOrm::FETCH_ONE);
 
         if (!empty($utilisateur)) {
 
@@ -26,7 +26,7 @@ function connexion_handler()
                     setcookie("remember_me", $utilisateur->id, time() + 2592000);
 
 
-                redirection('article');
+                redirection('accueil');
             } else die('Erreur de mot de passe');
         }
     }
@@ -36,5 +36,5 @@ function connexion_handler()
 function deconnexion()
 {
     session_destroy();
-    redirection('article');
+    redirection('accueil');
 }

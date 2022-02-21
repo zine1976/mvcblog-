@@ -6,7 +6,7 @@ require_once __DIR__ . '/header.php'; ?>
 
 <h1>Connexion</h1>
 
-<form method="post" action="index.php?route=connexion-handler&id=<?= $article->id ?>">
+<form method="post" action="index.php?route=connexion-handler">
     
     <div class="form-group row">
         <label for="login" class="col-sm-12 col-form-label">Identifiant</label>
