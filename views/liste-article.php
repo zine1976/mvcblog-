@@ -16,15 +16,20 @@ require_once __DIR__ . '/header.php'; ?>
         <li class="list-group-item"><?= $a->auteur ?></li>
         <li class="list-group-item"><?= $a->titre ?></li>
 
-      </ul>      <p class="card-text">
+      </ul>
+      <p class="card-text">
         <a class="text-align-right" href="index.php?route=detail&id=<?= $a->id ?>">detail</a>
-<div>
+      <div>
         <a class="text-align-right" href="index.php?route=modif&id=<?= $a->id ?>">modifier un article</a>
-        </div>
+      </div>
 
-        <?php if (!empty($_SESSION['pseudo']) && $_SESSION['pseudo'] == 'admin') : ?>
-          <a class="text-align-right text-danger ml-2" href="index.php?route=sup-article&id=<?= $a->id ?>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
-        <?php endif; ?>
+      <div>
+        <a class="text-align-right" href="index.php?route=sup-article&id=<?= $a->id ?>">supprimer un article</a>
+      </div>
+
+      <?php if (!empty($_SESSION['pseudo']) && $_SESSION['pseudo'] == 'admin') : ?>
+        <a class="text-align-right text-danger ml-2" href="index.php?route=sup-article&id=<?= $a->id ?>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
+      <?php endif; ?>
 
       </p>
     </div>
