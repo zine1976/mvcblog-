@@ -11,14 +11,14 @@ function connexion_handler()
 
 
         include __DIR__ . '/../model/utilisateur.php';
-        $utilisateur = utilisateur::retrieveByField('pseudo', $_POST['login'], SimpleOrm::FETCH_ONE);
+        $utilisateur = utilisateur::retrieveByField('identifiant', $_POST['login'], SimpleOrm::FETCH_ONE);
 
         if (!empty($utilisateur)) {
 
             if (password_verify($_POST['password'], $utilisateur->mot_de_passe)) {
 
 
-                $_SESSION['pseudo'] = $utilisateur->pseudo;
+                $_SESSION['identifiant'] = $utilisateur->identifiant;
                 $_SESSION['id'] = $utilisateur->id;
 
 

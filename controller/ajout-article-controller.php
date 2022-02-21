@@ -2,7 +2,7 @@
 
 function ajouter()
 {
-    if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
+    if (empty($_SESSION['identifiant']) || $_SESSION['identifiant'] != 'admin') die('Erreur 403');
 
     
     include __DIR__ . '/../views/ajout-article.php';
@@ -10,7 +10,7 @@ function ajouter()
 
 function ajouter_handler()
 {
-    if (empty($_SESSION['pseudo']) || $_SESSION['pseudo'] != 'admin') die('Erreur 403');
+    if (empty($_SESSION['identifiant']) || $_SESSION['identifiant'] != 'admin') die('Erreur 403');
 
 
     if (
