@@ -15,11 +15,16 @@ require_once __DIR__ . '/header.php';?>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><?= $a-> auteur?></li>
-    <li class="list-group-item"><?= $a-> titre?>$</li>
+    <li class="list-group-item"><?= $a-> titre?></li>
     
   </ul>
   <div class="card-body">
     <a href="<?= url('detail&id='.$a->id) ?>" class="card-link">detail</a>
+    <!-- <a href="<?= url('connexion') ?>" class="card-link">connexion</a> -->
+  </div>
+
+  <div class="card-body">
+    <a href="index.php?route=supprimer-article-controller&id=<?= $article->id ?>" onclick="return confirm('Êtes-vous sûr ?')" class="text-align-right text-danger ml-2">supprimer</a>
     <!-- <a href="<?= url('connexion') ?>" class="card-link">connexion</a> -->
   </div>
 

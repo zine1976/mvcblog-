@@ -33,6 +33,17 @@ switch ($route) {
                 require_once controller('detail-article-controller');
                 break;
 
+                case 'ajout':
+                    require_once controller('ajout-article-controller');
+                    break;
+
+                    case 'supprimer-produit':
+                        include __DIR__ . '/controllers/produits-controller.php';
+                        supprimer();
+                        break;
+
+                        
+
             default:
         erreur(404);
         break;

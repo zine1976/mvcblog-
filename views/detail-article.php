@@ -20,10 +20,15 @@ require_once __DIR__ . '/header.php';?>
     <dd>
         <p><?= $article->titre ?></p>
     </dd>
+    <dt>contenu</dt>
+    <dd>
+        <p><?= $article->contenu ?></p>
+    </dd>
 
     <dt>image</dt>
 
-    <dd> <img src="<?= $a->image ?>" class="card-img-top" alt="...">
+    <dd>
+         <img src="<?= $article->image ?>" class="card-img-top" alt="...">
 
 </dd> 
 </dl>
