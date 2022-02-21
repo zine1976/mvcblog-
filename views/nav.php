@@ -6,7 +6,8 @@
             <?php if (!empty($_SESSION['pseudo']) && $_SESSION['pseudo'] == 'admin') : ?>
     <?php endif; ?>
 
-    <a class="nav-link" href="index.php?route=ajout">Ajouter un produit</a>
+    <a class="nav-link" href="index.php?route=ajout">Ajouter un article</a>
+    
 
     <?php if (empty($_SESSION['pseudo'])) : ?>
         <a class="nav-link" href="index.php?route=connexion">Connexion</a>

@@ -65,6 +65,17 @@ switch ($route) {
         deconnexion();
         break;
 
+        case 'modif':
+            
+            require_once controller('modif-article-controller');
+            modifier();
+            break;
+
+            case 'modif-article-handler':
+                include __DIR__ . '/controller/modif-article-controller.php';
+                modifier_handler();
+                break;
+
 
     default:
         erreur(404);
