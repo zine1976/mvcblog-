@@ -5,19 +5,19 @@ include __DIR__ . '/../model/commentaire.php';
 
 function commenter()
 {
-    if (empty($_SESSION['identifiant'])  ) die('Erreur 403');
-
-
+    if (empty($_SESSION['identifiant'])) die('Erreur 403');
+   
     if (
         !empty($_POST['contenu'])
         // && !empty($_POST['id_utilisateur'])
         // && !empty($_POST['contenu'])
         // && !empty($_POST['id_article'])
         // && !empty($_POST['date_de_publication'])
-       
         
 
+
     ) {
+        
 
 
         require_once model('commentaire');
@@ -33,7 +33,6 @@ function commenter()
         $commentaire->save();
 
         redirection('article');
-    } 
+    }
     include __DIR__ . '/../views/detail-article.php';
-
 }
