@@ -51,17 +51,17 @@ switch ($route) {
         break;
 
     case 'connexion':
-        include __DIR__ . '/controller/article-handler-controller.php';
+        include __DIR__ . '/controller/connexion-handler-controller.php';
         connexion();
         break;
 
     case 'connexion-handler':
-        include __DIR__ . '/controller/article-handler-controller.php';
+        include __DIR__ . '/controller/connexion-handler-controller.php';
         connexion_handler();
         break;
 
     case 'deconnexion':
-        include __DIR__ . '/controller/article-handler-controller.php';
+        include __DIR__ . '/controller/connexion-handler-controller.php';
         deconnexion();
         break;
 
