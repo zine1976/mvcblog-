@@ -18,7 +18,7 @@
     <a class="nav-link" href="index.php?route=creer-compte-handler">Creer un compte</a>
    
     <?php else : ?>
-        <a class="nav-link" href="index.php?route=deconnexion"></a>
+        
 
     <?php endif; ?>
 
