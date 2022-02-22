@@ -2,9 +2,9 @@
     <a class="nav-link" href="<?= url('article') ?>">articles</a>
     <a class="nav-link" href="<?= url('accueil') ?>">accueil</a>
     <?php if (!empty($_SESSION['identifiant']) && $_SESSION['identifiant'] == 'admin') : ?>
-    <?php endif; ?>
 
     <a class="nav-link" href="index.php?route=ajout">Ajouter un article</a>
+    <?php endif; ?>
 
 
 
@@ -17,9 +17,9 @@
 
     <?php endif; ?>
     <?php if (empty($_SESSION['identifiant'])) : ?>
-    <a class="nav-link" href="index.php?route=creer-compte-handler">Creer un compte</a>
+        <a class="nav-link" href="index.php?route=creer-compte-handler">Creer un compte</a>
     <?php else : ?>
-        
+
 
     <?php endif; ?>
 
