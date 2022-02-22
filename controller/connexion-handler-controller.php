@@ -22,6 +22,7 @@ function connexion_handler()
                 $_SESSION['id'] = $utilisateur->id;
                 $_SESSION['pseudo'] = $utilisateur->pseudo;
                 $_SESSION['avatar'] = $utilisateur->avatar;
+                $_SESSION['role'] = $utilisateur->role;
 
                 if (!empty($_POST['remember_me']))
                     setcookie("remember_me", $utilisateur->id, time() + 2592000);
