@@ -31,6 +31,12 @@ require_once __DIR__ . '/header.php';?>
          <img src="<?= $article->image ?>" class="card-img-top" alt="...">
 
 </dd> 
+
+<?php foreach ($commentaire as $c) { ?>
+    <dt>commentaires</dt>
+    <dt><?= $c->contenu ?></dt>
+<?php } ?>
+
 </dl>
 
 <?php 
