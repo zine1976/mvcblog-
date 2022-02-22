@@ -39,6 +39,28 @@ require_once __DIR__ . '/header.php';?>
 
 </dl>
 
+<form method="post" action="index.php?route=commenter">
+
+
+
+    <div class="form-group row">
+        <label for="commentaire" class="col-12 col-form-label">commentaires</label>
+        <div class="col-12">
+            
+           
+        <textarea class="form-control"  name="contenu" id="contenu" rows="5">Ecrivez votre commentaire ici </textarea>
+        </div>
+    </div>
+   
+    
+
+    <div class="form-group row">
+        <button href="<?= url('liste&id=' . $a->id) ?>" type="submit" class="btn btn-primary">Envoyer</button>
+
+
+    </div>
+</form>
+
 <?php 
 
 require_once __DIR__ . '/footer.php';?>

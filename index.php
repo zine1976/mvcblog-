@@ -76,15 +76,18 @@ switch ($route) {
         modifier_handler();
         break;
 
-        // case 'creer-compte':
-        //     require_once controller('creer-compte-controller');
-        //     creer_compte();
-        //     break;
+       
 
             case 'creer-compte-handler':
                 require_once controller('creer-compte-controller');
                 creer_compte_handler();
                 break;
+
+
+                case 'commenter':
+                    include __DIR__ . '/controller/commentaire-controller.php';
+                    commenter();
+                    break;
 
 
     default:

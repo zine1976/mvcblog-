@@ -15,4 +15,5 @@ $commentaire = commentaire::retrieveByField('id_article', $_GET['id']);
 
 
 
+
 include __DIR__ . '/../views/detail-article.php';
