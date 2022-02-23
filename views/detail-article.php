@@ -23,7 +23,7 @@ require_once __DIR__ . '/header.php'; ?>
     <dt>image</dt>
 
     <dd>
-        <img src="<?= $article->image ?>" class="card-img-top" alt="...">
+        <img src="<?= $article->image ?>" class="card-img-top" style="width: 18rem;" alt="...">
 
     </dd>
 

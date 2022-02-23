@@ -18,7 +18,11 @@ require_once __DIR__ . '/header.php'; ?>
 
       </ul>
       <p class="card-text">
+     
+
         <a class="text-align-right" href="index.php?route=detail&id=<?= $a->id ?>">detail</a>
+       
+
         <?php if (!empty($_SESSION['role']) && $_SESSION['role'] == 'admin') : ?>
       
         <div>

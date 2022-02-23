@@ -22,8 +22,7 @@ function commenter()
         $commentaire->contenu = $_POST['contenu'];
         $commentaire->id_utilisateur = $_SESSION['id'];
         
-
-        $commentaire->id_article =  $_GET['id'];
+        $commentaire->id_article = $_GET['id'];
 
 
         $commentaire->save();
