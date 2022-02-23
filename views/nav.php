@@ -12,7 +12,7 @@
         <a class="nav-link" href="index.php?route=connexion">Connexion</a>
     <?php else : ?>
         <a class="nav-link" href="index.php?route=deconnexion">Déconnexion</a>
-        <img src="<?= $_SESSION['avatar'] ?>" class="nav-item" alt="...">
+        <img src="<?= $_SESSION['avatar'] ?>" class="nav-item" style="width: 4rem;" alt="...">
         <a class="nav-item"><?= $_SESSION['pseudo'] ?></a>
 
     <?php endif; ?>

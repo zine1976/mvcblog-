@@ -40,6 +40,8 @@ require_once __DIR__ . '/header.php'; ?>
         <label for="contenu" class="col-12 col-form-label">image</label>
         <div class="col-12">
             <input type="url" class="form-control" name="image" id="image" placeholder="image" value="<?= $article->image ?>" required>
+    
+        
         </div>
     </div>
 
