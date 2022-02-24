@@ -25,13 +25,14 @@ require_once __DIR__ . '/header.php'; ?>
     <div class="form-group row">
         <div class="col-sm-10">
             <input type="checkbox" name="remember_me">
-            <label for="remember_me">cookie</label><br>
+            <label for="remember_me">se souvenir de moi</label><br>
             <button type="submit" class="btn btn-primary">Connexion</button>
         </div>
     </div>
-
-
 </form>
+<p>
+    Vous n'avez pas encore de compte ? <a href="<?= url('creer-compte-handler') ?>">Créez-en-un</a> !
+</p>
 
 <?php
 require_once __DIR__ . '/footer.php'; ?>

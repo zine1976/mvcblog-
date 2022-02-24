@@ -7,7 +7,9 @@ include __DIR__ . '/../model/article.php';
 function commenter()
 {
     if (empty($_SESSION['identifiant'])) die('Erreur 403');
+    if (empty($_GET['id_article'])) erreur(404);
    
+
     if (
         !empty($_POST['contenu'])
         
@@ -22,7 +24,7 @@ function commenter()
         $commentaire->contenu = $_POST['contenu'];
         $commentaire->id_utilisateur = $_SESSION['id'];
         
-        $commentaire->id_article = $_GET['id'];
+        $commentaire->id_article = $_GET['id_article'];
 
 
         $commentaire->save();

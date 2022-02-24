@@ -4,9 +4,9 @@ require_once __DIR__ . '/header.php'; ?>
 <?php require_once __DIR__ . '/nav.php';
 ?>
 
-<h1><?= $article->titre ?></h1>
+<h1 class="ml-5"><?= $article->titre ?></h1>
 
-<dl>
+<dl class="ml-5">
 
 
     <dt>auteur</dt>
@@ -20,27 +20,25 @@ require_once __DIR__ . '/header.php'; ?>
         <p><?= $article->contenu ?></p>
     </dd>
 
-    <dt>image</dt>
+    
 
     <dd>
-        <img src="<?= $article->image ?>" class="card-img-top" style="width: 18rem;" alt="...">
+        <img src="<?= $article->image ?>" class="img-fluid object-cover mt-3 mb-5"  alt="...">
 
     </dd>
 
-    <?php foreach ($commentaire as $c) { ?>
-        <dt>commentaires</dt>
-        <dt><?= $c->contenu ?></dt>
-    <?php } ?>
+    
 
 </dl>
 
+<?php
+!empty($_SESSION['utilisateur']);  ?>
+<form method="post" action="<?= url('commenter&id_article=' . $article->id) ?> ">
 
-<form method="post" action="index.php?route=commenter">
 
 
-
-    <div class="form-group row">
-        <label for="commentaire" class="col-12 col-form-label">commentaires</label>
+    <div class="form-group row ml-5">
+        <label for="commentaire" class="col-12 col-form-label">commentaire</label>
         <div class="col-12">
 
 
@@ -48,15 +46,25 @@ require_once __DIR__ . '/header.php'; ?>
         </div>
     </div>
 
-
-
-    <div class="form-group row">
-        <button href="<?= url('liste&id=' . $a->id) ?>" type="submit" class="btn btn-primary">Envoyer</button>
-
+    <div class="form-group row ml-5">
+        <button href="<?= url('liste&id=' . $a->id) ?>" type="submit" class="btn btn-primary">Poster</button>
 
     </div>
     
 </form>
+<?php  ?>
+<?php foreach ($commentaire as $commentaire) : ?>
+    <div class="row my-2 ml-5">
+        <div class="col-1">
+            <img src="https://picsum.photos/40" alt="" class="rounded-circle" width="40" height="40">
+        </div>
+        <p class="col-10 ml-5">
+            <b>Utilisateur #<?= $commentaire->id_utilisateur ?></span> <br>
+            <?= $commentaire->contenu ?>
+        </p>
+    </div>
+<?php endforeach; ?>
+
 
 
 <?php

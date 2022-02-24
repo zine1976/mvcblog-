@@ -37,9 +37,9 @@ require_once __DIR__ . '/header.php'; ?>
     </div>
 
     <div class="form-group row">
-        <label for="contenu" class="col-12 col-form-label">image</label>
+        <label for="image" class="col-12 col-form-label" style="width: 18rem;">image</label>
         <div class="col-12">
-            <input type="url" class="form-control" name="image" id="image" placeholder="image" value="<?= $article->image ?>" required>
+            <input type="url" class="form-control"  name="image" id="image"  value="<?= $article->image ?>"placeholder="image"  required>
     
         
         </div>
