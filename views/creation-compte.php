@@ -3,7 +3,7 @@
 require_once __DIR__ . '/header.php'; ?>
 <?php require_once __DIR__ . '/nav.php';
 ?>
-
+<div class="ml-5 mr-5">
 <h1>Creer son compte</h1>
 
 <form method="post" action="index.php?route=creer-compte-handler">
@@ -49,5 +49,6 @@ require_once __DIR__ . '/header.php'; ?>
 
     </div>
 </form>
+</div> 
 <?php
 require_once __DIR__ . '/footer.php'; ?>

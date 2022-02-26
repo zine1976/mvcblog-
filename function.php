@@ -24,8 +24,18 @@ function url(string $route = 'liste'): string
 }
 
 
-function erreur(int $code = 500)
-{
-    echo 'Erreur ' . $code;
+// function erreur(int $code = 500)
+// {
+//     echo 'Erreur ' . $code;
+//     die();
+// }
+function view(string $nom) {
+    return __DIR__ . '/views/' . $nom . '.php';
+}
+
+function erreur(int $code = 500) {
+    if (file_exists(view('erreurs/' . $code))) require_once view('erreurs/' . $code);
+    else require_once view('erreurs/500');
+
     die();
 }

@@ -92,5 +92,5 @@ switch ($route) {
 
     default:
         erreur(404);
-        break;
+        // break;
 }

@@ -42,12 +42,12 @@ require_once __DIR__ . '/header.php'; ?>
         <div class="col-12">
 
 
-            <textarea class="form-control" name="contenu" id="contenu" rows="5">Ecrivez votre commentaire ici </textarea>
+            <textarea class="form-control" name="contenu" id="contenu" placeholder="Ecrivez votre commentaire ici" rows="5"></textarea>
         </div>
     </div>
 
     <div class="form-group row ml-5">
-        <button href="<?= url('liste&id=' . $a->id) ?>" type="submit" class="btn btn-primary">Poster</button>
+        <button href="<?= url('liste&id=' . $a->id) ?>" type="submit"  class="btn btn-primary">Poster</button>
 
     </div>
     

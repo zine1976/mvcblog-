@@ -6,7 +6,7 @@ include __DIR__ . '/../model/article.php';
 
 function commenter()
 {
-    if (empty($_SESSION['identifiant'])) die('Erreur 403');
+    if (empty($_SESSION['identifiant'])) erreur(403);
     if (empty($_GET['id_article'])) erreur(404);
    
 

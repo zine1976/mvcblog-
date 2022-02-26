@@ -4,6 +4,7 @@ require_once __DIR__ . '/header.php'; ?>
 <?php require_once __DIR__ . '/nav.php';
 ?>
 
+<div class="ml-5 mr-5">
 <h1>Connexion</h1>
 
 <form method="post" action="index.php?route=connexion-handler">
@@ -33,6 +34,8 @@ require_once __DIR__ . '/header.php'; ?>
 <p>
     Vous n'avez pas encore de compte ? <a href="<?= url('creer-compte-handler') ?>">Créez-en-un</a> !
 </p>
+
+</div>
 
 <?php
 require_once __DIR__ . '/footer.php'; ?>

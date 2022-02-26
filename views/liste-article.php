@@ -3,7 +3,7 @@
 require_once __DIR__ . '/header.php'; ?>
 <?php require_once __DIR__ . '/nav.php';
 ?>
-<h1>Liste des articles</h1>
+<h1 class="ml-4">Liste des articles</h1>
 
 <div class="d-flex flex-wrap justify-content-between"  >
 
@@ -31,7 +31,7 @@ require_once __DIR__ . '/header.php'; ?>
         <a class="btn btn-warning" href="index.php?route=modif&id=<?= $a->id ?>">modifier</a>
       </div>
     
-        <a class="btn btn-danger" href="index.php?route=sup-article&id=<?= $a->id ?>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
+        <a class="btn btn-danger mt-3" href="index.php?route=sup-article&id=<?= $a->id ?>" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</a>
       <?php endif; ?>
 
       </p>
